@@ -13630,7 +13630,7 @@ Developed originally by Joseph Redmon: <a href="https://pjreddie.com/darknet/yol
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[100]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">##############################################################</span>
@@ -13680,6 +13680,71 @@ Developed originally by Joseph Redmon: <a href="https://pjreddie.com/darknet/yol
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/home/ubuntu/repos/cnn-project/dog-project/darkflow/dark/darknet.py:54: UserWarning: ./cfg/yolo-face_final.cfg not found, use cfg/yolo-face.cfg instead
+  cfg_path, FLAGS.model))
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Parsing cfg/yolo-face.cfg
+Loading bin/yolo-face_final.weights ...
+Successfully identified 178079580 bytes
+Finished in 0.0036089420318603516s
+
+Building net ...
+Source | Train? | Layer description                | Output size
+-------+--------+----------------------------------+---------------
+       |        | input                            | (?, 448, 448, 3)
+ Load  |  Yep!  | scale to (-1, 1)                 | (?, 448, 448, 3)
+ Load  |  Yep!  | conv 3x3p1_1    leaky            | (?, 448, 448, 16)
+ Load  |  Yep!  | maxp 2x2p0_2                     | (?, 224, 224, 16)
+ Load  |  Yep!  | conv 3x3p1_1    leaky            | (?, 224, 224, 32)
+ Load  |  Yep!  | maxp 2x2p0_2                     | (?, 112, 112, 32)
+ Load  |  Yep!  | conv 3x3p1_1    leaky            | (?, 112, 112, 64)
+ Load  |  Yep!  | maxp 2x2p0_2                     | (?, 56, 56, 64)
+ Load  |  Yep!  | conv 3x3p1_1    leaky            | (?, 56, 56, 128)
+ Load  |  Yep!  | maxp 2x2p0_2                     | (?, 28, 28, 128)
+ Load  |  Yep!  | conv 3x3p1_1    leaky            | (?, 28, 28, 256)
+ Load  |  Yep!  | maxp 2x2p0_2                     | (?, 14, 14, 256)
+ Load  |  Yep!  | conv 3x3p1_1    leaky            | (?, 14, 14, 512)
+ Load  |  Yep!  | maxp 2x2p0_2                     | (?, 7, 7, 512)
+ Load  |  Yep!  | conv 3x3p1_1    leaky            | (?, 7, 7, 1024)
+ Load  |  Yep!  | conv 3x3p1_1    leaky            | (?, 7, 7, 1024)
+ Load  |  Yep!  | conv 3x3p1_1    leaky            | (?, 7, 7, 1024)
+ Load  |  Yep!  | flat                             | (?, 50176)
+ Load  |  Yep!  | full 50176 x 256  linear         | (?, 256)
+ Load  |  Yep!  | full 256 x 4096  leaky           | (?, 4096)
+ Load  |  Yep!  | drop                             | (?, 4096)
+ Load  |  Yep!  | full 4096 x 1331  linear         | (?, 1331)
+-------+--------+----------------------------------+---------------
+Running entirely on CPU
+Finished in 1.866919994354248s
+
+The percentage of human faces in human images:  48.0 %
+the percentage of human faces in dog images:  73.0 %
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
